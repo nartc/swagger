@@ -6,7 +6,7 @@ export class SwaggerTypesMapper {
   mapParamTypes(
     parameters: Array<ParamWithTypeMetadata | BaseParameterObject>
   ): any {
-    return parameters.map(param => {
+    return parameters.map((param) => {
       if (this.hasSchemaDefinition(param as BaseParameterObject)) {
         return this.omitParamType(param);
       }
